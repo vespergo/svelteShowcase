@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npx --yes sv create C:\\\\projects\\\\claudeDesktopTest --template minimal --types ts --no-add-ons --install npm 2>&1)"
+    ]
+  }
+}

@@ -70,7 +70,7 @@ let {
   This page covers how to build and combine reusable components in Svelte 5.
   Child components declare their inputs with <code>$props</code>, opt specific
   props into two-way binding with <code>$bindable</code>, and accept reusable
-  template fragments through <code>{@render}</code> snippets — the modern
+  template fragments through <code>{'{@render}'}</code> snippets — the modern
   replacement for named slots. The demos below include a <code>Counter</code>
   whose value binds back to the parent with <code>bind:value</code>, and a
   <code>Card</code> whose header and footer are passed in as snippets so a single

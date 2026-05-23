@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   const demos = [
     {
       href: '/reactivity',
@@ -52,14 +53,14 @@
     techniques, and project setup — and pairs a small interactive demo with the
     exact source that powers it. No UI libraries, no extra abstractions: every
     line is something you'd write in a real project. Pick a tile below to jump
-    in, or read the <a href="/about">About</a> page for an overview of every
+    in, or read the <a href="{base}/about">About</a> page for an overview of every
     demo and the rune system that ties them together.
   </p>
 </section>
 
 <div class="grid">
   {#each demos as demo}
-    <a class="tile" href={demo.href}>
+    <a class="tile" href="{base}{demo.href}">
       <h3>{demo.title}</h3>
       <p>{demo.blurb}</p>
       <span class="arrow">→</span>

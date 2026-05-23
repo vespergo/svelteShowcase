@@ -2,6 +2,7 @@
   import '../app.css';
   import { fade } from 'svelte/transition';
   import { page } from '$app/state';
+  import { base } from '$app/paths';
   import NavLink from '$lib/components/NavLink.svelte';
 
   let { children } = $props();
@@ -9,7 +10,7 @@
 
 <div class="shell">
   <header class="topbar">
-    <a class="brand" href="/">Svelte Showcase</a>
+    <a class="brand" href="{base}/">Svelte Showcase</a>
     <nav>
       <NavLink href="/reactivity">Reactivity</NavLink>
       <NavLink href="/forms">Forms</NavLink>

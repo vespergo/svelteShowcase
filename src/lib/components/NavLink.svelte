@@ -1,13 +1,17 @@
 <script lang="ts">
   import { page } from '$app/state';
+  import { base } from '$app/paths';
   import type { Snippet } from 'svelte';
 
   let { href, children }: { href: string; children: Snippet } = $props();
 
-  let active = $derived(page.url.pathname === href);
+  let resolved = $derived(`${base}${href}`);
+  let active = $derived(
+    page.url.pathname === resolved || page.url.pathname === `${resolved}/`
+  );
 </script>
 
-<a {href} class:active aria-current={active ? 'page' : undefined}>
+<a href={resolved} class:active aria-current={active ? 'page' : undefined}>
   {@render children()}
 </a>
 

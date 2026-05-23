@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   const pages = [
     {
       href: '/reactivity',
@@ -102,7 +103,7 @@
   <h2>Pages</h2>
   <div class="page-list">
     {#each pages as p}
-      <a class="page-card" href={p.href}>
+      <a class="page-card" href="{base}{p.href}">
         <div class="page-header">
           <span class="icon">{p.icon}</span>
           <div>
